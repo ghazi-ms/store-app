@@ -5,10 +5,6 @@ import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import android.provider.ContactsContract
-import android.widget.*
-import android.widget.Toast
-import java.util.Arrays.toString
 
 
 class DBHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
@@ -40,12 +36,16 @@ class DBHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
         onCreate(db)
     }
 
-    fun  CheckUser(user_name : String , password : String): Boolean {
-        val db = this.writableDatabase
-        val user:String=  db.rawQuery("SELECT User_name FROM " + TABLE_NAME + " WHERE User_name = " + user_name,null).toString()
-        val pass:String =db.rawQuery("SELECT User_password FROM " + TABLE_NAME + " WHERE User_name = " + user_name,null).toString()
-        db.close()
-        return true // user_name==user && password == pass
+    fun getName(): Cursor? {
+
+        // here we are creating a readable
+        // variable of our database
+        // as we want to read value from it
+        val db = this.readableDatabase
+
+        // below code returns a cursor to
+        // read data from the database
+        return db.rawQuery("SELECT * FROM " + TABLE_NAME, null)
 
     }
     // This method is for adding data in our database
@@ -77,10 +77,7 @@ class DBHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
         // closing our database
        db.close()
     }
-
-    // below method is to get
-    // all data from our database
-    fun getName(): Cursor? {
+    fun getUserData(username : String ): Cursor? {
 
         // here we are creating a readable
         // variable of our database
@@ -89,10 +86,9 @@ class DBHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
 
         // below code returns a cursor to
         // read data from the database
-        return db.rawQuery("SELECT * FROM " + TABLE_NAME, null)
+        return db.rawQuery("SELECT User_name,User_password FROM " + TABLE_NAME, null)
 
     }
-
     companion object{
         // here we have defined variables for our database
 
