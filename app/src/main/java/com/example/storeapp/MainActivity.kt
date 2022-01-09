@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
                Toast.makeText(this, uses + " : " + pas, Toast.LENGTH_LONG).show()
                 cursor.close()
-                intent = Intent(this, user_page::class.java)
+                intent = Intent(this, homePage::class.java)
                 startActivity(intent)
            }else {
                 while (cursor.moveToNext()) {
@@ -42,13 +42,15 @@ class MainActivity : AppCompatActivity() {
                         Toast.makeText(this, uses + " : " + pas, Toast.LENGTH_LONG).show()
                         cursor.close()
 
-                        intent = Intent(this, user_page::class.java)
+                       intent = Intent(this, homePage::class.java)
                         startActivity(intent)
                        break
                     }
 
                 }
             }
+            intent = Intent(this, homePage::class.java)
+            startActivity(intent)
         }
 
         SignUpBtn.setOnClickListener {

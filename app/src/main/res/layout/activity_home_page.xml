@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".homePage"
+    >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+
+            app:toolbarId="@+id/toolbar">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FF0000"></androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ScrollView
+                android:layout_width="409dp"
+                android:layout_height="625dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/categoryTxt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:text="HP Inks"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <HorizontalScrollView
+                        android:id="@+id/Horizontal1"
+                        android:layout_width="409dp"
+                        android:layout_height="190dp"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/categoryTxt1">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:id="@+id/hp1"
+                                android:layout_width="200sp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:minHeight="48dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/hp1"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <ImageButton
+                                android:id="@+id/hp2"
+                                android:layout_width="200sp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                app:layout_constraintStart_toEndOf="@+id/hp1"
+                                app:layout_constraintTop_toTopOf="@+id/hp1"
+                                app:srcCompat="@drawable/hp2"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <ImageButton
+                                android:id="@+id/hp3"
+                                android:layout_width="200sp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                app:layout_constraintStart_toEndOf="@+id/hp2"
+                                app:layout_constraintTop_toTopOf="@+id/hp2"
+                                app:srcCompat="@drawable/hp3"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <ImageButton
+                                android:id="@+id/hp4"
+                                android:layout_width="200sp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                app:layout_constraintStart_toEndOf="@+id/hp3"
+                                app:layout_constraintTop_toTopOf="@+id/hp3"
+                                app:srcCompat="@drawable/hp4"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <ImageButton
+                                android:id="@+id/hp5"
+                                android:layout_width="200sp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                app:layout_constraintStart_toEndOf="@+id/hp4"
+                                app:layout_constraintTop_toTopOf="@+id/hp4"
+                                app:srcCompat="@drawable/hp5"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <ImageButton
+                                android:id="@+id/hp6"
+                                android:layout_width="200sp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                app:layout_constraintStart_toEndOf="@+id/hp5"
+                                app:layout_constraintTop_toTopOf="@+id/hp5"
+                                app:srcCompat="@drawable/hp6"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <ImageButton
+                                android:id="@+id/hp7"
+                                android:layout_width="200sp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                app:layout_constraintStart_toEndOf="@+id/hp6"
+                                app:layout_constraintTop_toTopOf="@+id/hp6"
+                                app:srcCompat="@drawable/hp7"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </HorizontalScrollView>
+
+                    <TextView
+                        android:id="@+id/categoryTxt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="Canon Inks"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="@id/categoryTxt1"
+                        app:layout_constraintTop_toBottomOf="@id/Horizontal1" />
+
+                    <HorizontalScrollView
+                        android:id="@+id/Horizontal2"
+                        android:layout_width="409dp"
+                        android:layout_height="190dp"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/categoryTxt2">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:id="@+id/canon1"
+                                android:layout_width="200sp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:minHeight="48dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/canon1"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <ImageButton
+                                android:id="@+id/canon2"
+                                android:layout_width="200sp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                app:layout_constraintStart_toEndOf="@+id/canon1"
+                                app:layout_constraintTop_toTopOf="@+id/canon1"
+                                app:srcCompat="@drawable/canon2"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <ImageButton
+                                android:id="@+id/canon3"
+                                android:layout_width="200sp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                app:layout_constraintStart_toEndOf="@+id/canon2"
+                                app:layout_constraintTop_toTopOf="@+id/canon2"
+                                app:srcCompat="@drawable/canon3"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <ImageButton
+                                android:id="@+id/canon4"
+                                android:layout_width="200sp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                app:layout_constraintStart_toEndOf="@+id/canon3"
+                                app:layout_constraintTop_toTopOf="@+id/canon3"
+                                app:srcCompat="@drawable/canon4"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <ImageButton
+                                android:id="@+id/canon5"
+                                android:layout_width="200sp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                app:layout_constraintStart_toEndOf="@+id/canon4"
+                                app:layout_constraintTop_toTopOf="@+id/canon4"
+                                app:srcCompat="@drawable/canon5"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <ImageButton
+                                android:id="@+id/canon6"
+                                android:layout_width="200sp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                app:layout_constraintStart_toEndOf="@+id/canon5"
+                                app:layout_constraintTop_toTopOf="@+id/canon5"
+                                app:srcCompat="@drawable/canon6"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </HorizontalScrollView>
+
+                    <TextView
+                        android:id="@+id/categoryTxt3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="Canon Inks"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="@id/categoryTxt2"
+                        app:layout_constraintTop_toBottomOf="@id/Horizontal2" />
+
+                    <HorizontalScrollView
+                        android:id="@+id/Horizontal3"
+                        android:layout_width="409dp"
+                        android:layout_height="190dp"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/categoryTxt3">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:id="@+id/bother1"
+                                android:layout_width="200sp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:minHeight="48dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/bother1"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <ImageButton
+                                android:id="@+id/bother2"
+                                android:layout_width="200sp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                app:layout_constraintStart_toEndOf="@+id/bother1"
+                                app:layout_constraintTop_toTopOf="@+id/bother1"
+                                app:srcCompat="@drawable/bother2"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <ImageButton
+                                android:id="@+id/bother3"
+                                android:layout_width="200sp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                app:layout_constraintStart_toEndOf="@+id/bother2"
+                                app:layout_constraintTop_toTopOf="@+id/bother2"
+                                app:srcCompat="@drawable/bother3"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <ImageButton
+                                android:id="@+id/bother4"
+                                android:layout_width="200sp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                app:layout_constraintStart_toEndOf="@+id/bother3"
+                                app:layout_constraintTop_toTopOf="@+id/bother3"
+                                app:srcCompat="@drawable/bother4"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <ImageButton
+                                android:id="@+id/bother5"
+                                android:layout_width="200sp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                app:layout_constraintStart_toEndOf="@+id/bother4"
+                                app:layout_constraintTop_toTopOf="@+id/bother4"
+                                app:srcCompat="@drawable/bother5"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </HorizontalScrollView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
