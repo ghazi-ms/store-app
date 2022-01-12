@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("Range")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         setContentView(R.layout.activity_main)
 
         val SignUpBtn = findViewById<Button>(R.id.sign_up)
@@ -19,18 +20,20 @@ class MainActivity : AppCompatActivity() {
         val db = DBHelper(this, null)
 
         LogInBtn.setOnClickListener {
+
             val username = findViewById<EditText>(R.id.User_name).text.toString()
             val pass = findViewById<EditText>(R.id.User_password).text.toString()
             val cursor = db.getUserData(username)
             cursor!!.moveToFirst()
             var uses : String = cursor.getString(cursor.getColumnIndex(DBHelper.User_Name.toString()))
             var pas : String =  cursor.getString(cursor.getColumnIndex(DBHelper.User_password.toString()))
-           // Toast.makeText(this, uses + " : " + pas, Toast.LENGTH_LONG).show()
+
             if (username == uses && pass == pas) {
 
                Toast.makeText(this, uses + " : " + pas, Toast.LENGTH_LONG).show()
                 cursor.close()
                 intent = Intent(this, homePage::class.java)
+                intent.putExtra("UserName", username)
                 startActivity(intent)
            }else {
                 while (cursor.moveToNext()) {
@@ -43,18 +46,19 @@ class MainActivity : AppCompatActivity() {
                         cursor.close()
 
                        intent = Intent(this, homePage::class.java)
+                       intent.putExtra("UserName", username)
                         startActivity(intent)
                        break
                     }
 
                 }
             }
-            intent = Intent(this, homePage::class.java)
-            startActivity(intent)
+
         }
 
         SignUpBtn.setOnClickListener {
-            intent =Intent(this, sign_up::class.java)
+
+          intent =Intent(this, sign_up::class.java)
              startActivity(intent)
         }
 

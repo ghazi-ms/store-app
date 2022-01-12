@@ -4,47 +4,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/redback"
-    tools:context=".sign_up">
-
-    <Button
-        android:id="@+id/editInfoBtn"
-        android:layout_width="179dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginEnd="116dp"
-        android:layout_marginBottom="80dp"
-        android:background="@drawable/roundbutton"
-        android:text="Sign Up"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UserName" />
+    android:background="@drawable/blueback"
+    tools:context=".Account_info">
 
     <EditText
-        android:id="@+id/UserName"
+        android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginEnd="101dp"
         android:background="@drawable/roundbutton"
         android:ems="10"
-        android:hint="User Name"
+        android:hint="Name"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/last_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_info" />
+
+    <EditText
+        android:id="@+id/Phonenumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="101dp"
+        android:background="@drawable/roundbutton"
+        android:ems="10"
+        android:hint="Phone Number"
+        android:inputType="phone"
         android:minHeight="48dp"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/editInfoBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Phonenumber" />
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/user_info"
+        android:layout_width="91dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="160dp"
+
+        android:layout_marginEnd="160dp"
+        android:background="@drawable/roundbutton"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="101dp"
+        android:layout_marginStart="100dp"
         android:layout_marginEnd="101dp"
         android:background="@drawable/roundbutton"
         android:ems="10"
@@ -92,39 +108,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name" />
 
-    <EditText
-        android:id="@+id/Phonenumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="101dp"
+    <Button
+        android:id="@+id/editInfoBtn"
+        android:layout_width="179dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="25dp"
         android:background="@drawable/roundbutton"
-        android:ems="10"
-        android:hint="Phone Number"
-        android:inputType="phone"
-        android:minHeight="48dp"
+        android:text="Edit Data"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/UserName"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/deleteBtn"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/Phonenumber" />
 
-    <EditText
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="101dp"
-        android:layout_marginEnd="101dp"
+    <Button
+        android:id="@+id/deleteBtn"
+        android:layout_width="179dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="25dp"
         android:background="@drawable/roundbutton"
-        android:ems="10"
-        android:hint="Name"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
+        android:text="Delete Account"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/last_name"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editInfoBtn"
+        app:layout_constraintTop_toBottomOf="@+id/Phonenumber" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

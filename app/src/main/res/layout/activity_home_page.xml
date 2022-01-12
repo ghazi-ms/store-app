@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".homePage"
+    android:background="@drawable/mulriback"
     >
 
     <com.google.android.material.appbar.AppBarLayout
@@ -13,22 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:layout_width="match_parent"
-            android:layout_height="63dp"
-            app:contentScrim="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
-
-            app:toolbarId="@+id/toolbar">
-
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#FF0000"></androidx.appcompat.widget.Toolbar>
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
-    </com.google.android.material.appbar.AppBarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -78,14 +64,18 @@
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent"
+                            >
 
                             <ImageButton
+                                android:background="@drawable/mulriback"
                                 android:id="@+id/hp1"
                                 android:layout_width="200sp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="5dp"
                                 android:minHeight="48dp"
+                                android:onClick="onClick"
+                                android:scaleType="fitXY"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
                                 app:srcCompat="@drawable/hp1"
@@ -95,7 +85,9 @@
                                 android:id="@+id/hp2"
                                 android:layout_width="200sp"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="15dp"
+                                android:layout_marginStart="12dp"
+                                android:onClick="onClick"
+                                android:scaleType="fitXY"
                                 app:layout_constraintStart_toEndOf="@+id/hp1"
                                 app:layout_constraintTop_toTopOf="@+id/hp1"
                                 app:srcCompat="@drawable/hp2"
@@ -106,6 +98,8 @@
                                 android:layout_width="200sp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="15dp"
+                                android:onClick="onClick"
+                                android:scaleType="fitXY"
                                 app:layout_constraintStart_toEndOf="@+id/hp2"
                                 app:layout_constraintTop_toTopOf="@+id/hp2"
                                 app:srcCompat="@drawable/hp3"
@@ -116,6 +110,8 @@
                                 android:layout_width="200sp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="15dp"
+                                android:onClick="onClick"
+                                android:scaleType="fitXY"
                                 app:layout_constraintStart_toEndOf="@+id/hp3"
                                 app:layout_constraintTop_toTopOf="@+id/hp3"
                                 app:srcCompat="@drawable/hp4"
@@ -126,6 +122,8 @@
                                 android:layout_width="200sp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="15dp"
+                                android:onClick="onClick"
+                                android:scaleType="fitXY"
                                 app:layout_constraintStart_toEndOf="@+id/hp4"
                                 app:layout_constraintTop_toTopOf="@+id/hp4"
                                 app:srcCompat="@drawable/hp5"
@@ -136,6 +134,8 @@
                                 android:layout_width="200sp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="15dp"
+                                android:onClick="onClick"
+                                android:scaleType="fitXY"
                                 app:layout_constraintStart_toEndOf="@+id/hp5"
                                 app:layout_constraintTop_toTopOf="@+id/hp5"
                                 app:srcCompat="@drawable/hp6"
@@ -146,6 +146,8 @@
                                 android:layout_width="200sp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="15dp"
+                                android:onClick="onClick"
+                                android:scaleType="fitXY"
                                 app:layout_constraintStart_toEndOf="@+id/hp6"
                                 app:layout_constraintTop_toTopOf="@+id/hp6"
                                 app:srcCompat="@drawable/hp7"
@@ -184,6 +186,8 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="5dp"
                                 android:minHeight="48dp"
+                                android:onClick="onClick"
+                                android:scaleType="fitXY"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
                                 app:srcCompat="@drawable/canon1"
@@ -194,6 +198,8 @@
                                 android:layout_width="200sp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="15dp"
+                                android:onClick="onClick"
+                                android:scaleType="fitXY"
                                 app:layout_constraintStart_toEndOf="@+id/canon1"
                                 app:layout_constraintTop_toTopOf="@+id/canon1"
                                 app:srcCompat="@drawable/canon2"
@@ -204,6 +210,8 @@
                                 android:layout_width="200sp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="15dp"
+                                android:onClick="onClick"
+                                android:scaleType="fitXY"
                                 app:layout_constraintStart_toEndOf="@+id/canon2"
                                 app:layout_constraintTop_toTopOf="@+id/canon2"
                                 app:srcCompat="@drawable/canon3"
@@ -214,6 +222,8 @@
                                 android:layout_width="200sp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="15dp"
+                                android:onClick="onClick"
+                                android:scaleType="fitXY"
                                 app:layout_constraintStart_toEndOf="@+id/canon3"
                                 app:layout_constraintTop_toTopOf="@+id/canon3"
                                 app:srcCompat="@drawable/canon4"
@@ -224,6 +234,8 @@
                                 android:layout_width="200sp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="15dp"
+                                android:onClick="onClick"
+                                android:scaleType="fitXY"
                                 app:layout_constraintStart_toEndOf="@+id/canon4"
                                 app:layout_constraintTop_toTopOf="@+id/canon4"
                                 app:srcCompat="@drawable/canon5"
@@ -234,6 +246,8 @@
                                 android:layout_width="200sp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="15dp"
+                                android:onClick="onClick"
+                                android:scaleType="fitXY"
                                 app:layout_constraintStart_toEndOf="@+id/canon5"
                                 app:layout_constraintTop_toTopOf="@+id/canon5"
                                 app:srcCompat="@drawable/canon6"
@@ -271,6 +285,8 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="5dp"
                                 android:minHeight="48dp"
+                                android:onClick="onClick"
+                                android:scaleType="fitXY"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
                                 app:srcCompat="@drawable/bother1"
@@ -281,6 +297,8 @@
                                 android:layout_width="200sp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="15dp"
+                                android:onClick="onClick"
+                                android:scaleType="fitXY"
                                 app:layout_constraintStart_toEndOf="@+id/bother1"
                                 app:layout_constraintTop_toTopOf="@+id/bother1"
                                 app:srcCompat="@drawable/bother2"
@@ -291,6 +309,8 @@
                                 android:layout_width="200sp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="15dp"
+                                android:onClick="onClick"
+                                android:scaleType="fitXY"
                                 app:layout_constraintStart_toEndOf="@+id/bother2"
                                 app:layout_constraintTop_toTopOf="@+id/bother2"
                                 app:srcCompat="@drawable/bother3"
@@ -301,6 +321,8 @@
                                 android:layout_width="200sp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="15dp"
+                                android:onClick="onClick"
+                                android:scaleType="fitXY"
                                 app:layout_constraintStart_toEndOf="@+id/bother3"
                                 app:layout_constraintTop_toTopOf="@+id/bother3"
                                 app:srcCompat="@drawable/bother4"
@@ -311,6 +333,8 @@
                                 android:layout_width="200sp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="15dp"
+                                android:onClick="onClick"
+                                android:scaleType="fitXY"
                                 app:layout_constraintStart_toEndOf="@+id/bother4"
                                 app:layout_constraintTop_toTopOf="@+id/bother4"
                                 app:srcCompat="@drawable/bother5"
@@ -327,6 +351,16 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/name_TXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        app:layout_anchor="@+id/appbar"
+        app:layout_anchorGravity="center_horizontal" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

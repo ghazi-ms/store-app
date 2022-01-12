@@ -3,7 +3,6 @@ package com.example.storeapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.ContactsContract
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -11,8 +10,10 @@ import android.widget.Toast
 class sign_up : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         setContentView(R.layout.activity_sign_up)
-        val addrecord = findViewById<Button>(R.id.DoneBtn)
+
+        val addrecord = findViewById<Button>(R.id.editInfoBtn)
         addrecord.setOnClickListener {
             val db = DBHelper(this, null)
 
