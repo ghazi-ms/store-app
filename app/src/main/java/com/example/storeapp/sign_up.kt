@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 
 class sign_up : AppCompatActivity() {
@@ -27,6 +28,8 @@ class sign_up : AppCompatActivity() {
             val user_name = findViewById<EditText>(R.id.UserName).text.toString()
             // calling method to add
             // name to our database
+            val t = findViewById<EditText>(R.id.last_name)
+
             db.adduser(number,name,last_name,pass,addressr,user_name)
 
             // Toast to message on the screen

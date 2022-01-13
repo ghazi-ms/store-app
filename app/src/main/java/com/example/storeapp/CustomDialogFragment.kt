@@ -5,6 +5,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.NumberPicker
+import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 
 
@@ -34,8 +35,8 @@ class CustomDialogFragment(var name : String) : DialogFragment(R.layout.fragment
         }
         buttonAdd.setOnClickListener {
             val selectedOption: Int = numberPicker.getValue()
-            // TODO( return selected choice )
-    dismiss()
+
+            dismiss()
         }
     }
 }

@@ -25,7 +25,7 @@ class Account_info : AppCompatActivity() {
         val number = findViewById<TextView>(R.id.Phonenumber)
         val addressr = findViewById<TextView>(R.id.address)
         val pass = findViewById<TextView>(R.id.password)
-        findViewById<TextView>(R.id.user_info).text="Welcome "+name + " "+ last_name
+
 
         val cursor = db.getUserDataEdit(user)
 
@@ -54,6 +54,7 @@ class Account_info : AppCompatActivity() {
             }
 
         }
+        findViewById<TextView>(R.id.user_info).text="Welcome "+name + " "+ last_name
         EditBtn.setOnClickListener(){
             val name = findViewById<EditText>(R.id.name).text.toString()
             val last_name = findViewById<EditText>(R.id.last_name).text.toString()
