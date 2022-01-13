@@ -344,6 +344,20 @@
                         </androidx.constraintlayout.widget.ConstraintLayout>
                     </HorizontalScrollView>
 
+                    <TextView
+                        android:id="@+id/ViewCart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="213dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="43dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="View Cart"
+                        app:layout_constraintBottom_toTopOf="@+id/Horizontal1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/categoryTxt1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </ScrollView>
 

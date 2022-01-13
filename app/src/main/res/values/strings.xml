@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">store app</string>
+    <string name="orderQuntity" />
 </resources>
