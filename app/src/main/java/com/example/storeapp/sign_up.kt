@@ -1,12 +1,11 @@
 package com.example.storeapp
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
 class sign_up : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,8 +17,7 @@ class sign_up : AppCompatActivity() {
         addrecord.setOnClickListener {
             val db = DBHelper(this, null)
 
-            // creating variables for values
-            // in name and age edit texts
+
             val name = findViewById<EditText>(R.id.name).text.toString()
             val last_name = findViewById<EditText>(R.id.last_name).text.toString()
             val number = findViewById<EditText>(R.id.Phonenumber).text.toString().toInt()

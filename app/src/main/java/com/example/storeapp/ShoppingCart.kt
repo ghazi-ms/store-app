@@ -2,12 +2,15 @@ package com.example.storeapp
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.RecyclerView
 import java.util.*
+
 
 class ShoppingCart : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
@@ -19,39 +22,44 @@ class ShoppingCart : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shopping_cart)
-        val items =
-            getSharedPreferences("CartItems", Context.MODE_PRIVATE).getString("name", "noitems")
-        val qtt =
-            getSharedPreferences("CartItems", Context.MODE_PRIVATE).getInt("selectedOption", 0)
+        try {
 
-        itemsList.add("hp 305 Quntity :" + qtt + " name" + items)
-        /*itemsList.add("hp 650")
-        itemsList.add("hp 912")
-        itemsList.add("hp 65")
-        itemsList.add("hp 712")
-        itemsList.add("hp 680")
-        itemsList.add("Canon 445")
-        itemsList.add("Canon 275 & 267")
-        itemsList.add("Canon pixma 490")
-        itemsList.add("Canon  primium P & PBK & C & M & Y")
-        itemsList.add("Canon GL-490 BK & C & M & Y")
-        itemsList.add("Canon  BK & C & M & Y")
-        itemsList.add("bother lc3217 ")
-        itemsList.add("bother lc3719XL BK")
-        itemsList.add("bother BI5000C")
-        itemsList.add("bother BK & C & M & Y BT")
-        itemsList.add("bother LC103Cl XL")*/
 
-        displayList.addAll(itemsList)
-        recyclerView = findViewById(R.id.rex)
-        recyclerAdapter = RecyclerAdapter(displayList)
-        recyclerView.adapter = recyclerAdapter
-        /*val uri:String="drawable/hp1"
+            val x = getSharedPreferences("CartItems", Context.MODE_PRIVATE).getStringSet(
+                "list",
+                null
+            ) as HashSet<String>
 
-        val imageResource = resources.getIdentifier(uri, null,"com.example.storeapp")
-        findViewById<ImageView>(R.id.Rtxview).set)*/
+            val t = x.iterator()
+            for (element in t) {
+                itemsList.add(element)
+
+            }
+
+            displayList.addAll(itemsList)
+            recyclerView = findViewById(R.id.rex)
+            recyclerAdapter = RecyclerAdapter(displayList)
+            recyclerView.adapter = recyclerAdapter
+
+
+            val clear = findViewById<Button>(R.id.clearBtn)
+            clear.setOnClickListener {
+
+                itemsList.clear()
+                displayList.clear()
+                x.clear()
+                getSharedPreferences("CartItems", Context.MODE_PRIVATE).edit().clear().commit()
+                recyclerAdapter.notifyDataSetChanged()
+                finish()
+                overridePendingTransition(0, 0)
+                startActivity(intent)
+                overridePendingTransition(0, 0)
+
+            }
+        } catch (exp: Exception) {
+            Log.d(exp.toString(), "sssssssssssssssssssssssssssssssssssss")
+        }
     }
-
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
 
